@@ -45,10 +45,10 @@ app.get('/game', function(req, res){
 
 function initialize() {
 	server.listen(80);
-	var host = server.address().address;
-	var port = server.address().port;
+	//var host = server.address().address;
+	//var port = server.address().port;
 
-	console.log('Application started at http://%s:%s', host, port);
+	//console.log('Application started at http://%s:%s', host, port);
 }
 
 initialize();
