@@ -1,0 +1,28 @@
+{
+  "name": "global-warfare",
+  "version": "1.0.0",
+  "description": "Challenge your friends and become the ultimate strategist",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKhowaja/global-warfare.git"
+  },
+  "keywords": [
+    "risk",
+    "global",
+    "warfare",
+    "game",
+    "strategy"
+  ],
+  "author": "Mustaqeem Khowaja, Xiaozhuo Yu, Kelvin Jiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKhowaja/global-warfare/issues"
+  },
+  "homepage": "https://github.com/MKhowaja/global-warfare#readme"
+}
