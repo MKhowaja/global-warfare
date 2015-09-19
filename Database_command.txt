@@ -1,0 +1,44 @@
+CREATE TABLE players (
+    id int(5),
+    name varchar(50),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE player_to_territories (
+    id varchar(50),
+    territories varchar(50),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE territories_to_infrantry (
+    id varchar(50),
+    infrantry int(50),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE territories_to_cavalry (
+    id varchar(50),
+    cavalry int(7),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE territories_to_artillery (
+    id varchar(50),
+    artillery int(5),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO players(id, name) VALUES
+(1, 'Player1');
+
+INSERT INTO player_to_territories (id, territories) VALUES
+("Player1", "China");
+
+INSERT INTO territories_to_infrantry(id, infrantry) VALUES
+("China", 4);
+
+INSERT INTO territories_to_cavalry (id, cavalry) VALUES
+("China", 1);
+
+INSERT INTO territories_to_artillery (id, artillery) VALUES
+("China", 0);
