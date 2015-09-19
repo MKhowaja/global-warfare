@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Challenge your friends and become the ultimate strategist",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.3",
+    "nodemon": "^1.5.1",
+    "request": "^2.62.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
