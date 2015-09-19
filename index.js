@@ -5,6 +5,8 @@ var express = require('express');
 var request = require('request');
 var path = require('path');
 
+var MAX_PLAYERS = 4;
+var numOfPlayers = 0;
 
 /*
 var mysql      = require('mysql');
@@ -60,6 +62,13 @@ io.on('connection', function(socket) {
 		console.log('zapped');
 		console.log(data);
 		//io.emit('zapper');
+	});
+
+	socket.on('playerentry', function(data){
+		if (numOfPlayers < MAX_PLAYERS){
+			console.log(data)
+			numOfPlayers+=1;
+		}
 	});
 
 });
