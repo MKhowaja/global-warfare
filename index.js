@@ -1,3 +1,12 @@
+var app = require ('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+var express = require('express');
+var request = require('request');
+var path = require('path');
+
+
+/*
 var mysql      = require('mysql');
  var connection = mysql.createConnection({
    host     : 'localhost',
@@ -22,13 +31,6 @@ var mysql      = require('mysql');
  connection.end();
 */
 
-var express = require('express');
-var request = require('request');
-var app = express();
-var server = require('http').Server(app);
-var path = require('path');
-var io = require('socket.io')(server);
-
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/main', function(req, res){
@@ -41,19 +43,23 @@ app.get('/game', function(req, res){
 	res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-
-var server = app.listen(80, function(){
+function initialize() {
+	server.listen(80);
 	var host = server.address().address;
 	var port = server.address().port;
 
 	console.log('Application started at http://%s:%s', host, port);
-});
+}
+
+initialize();
 
 io.on('connection', function(socket) {
 	console.log("A connection established");
 
-	socket.on('zap', function() {
+	socket.on('zap', function(data) {
 		console.log('zapped');
-		io.emit('zap');
+		console.log(data);
+		//io.emit('zapper');
 	});
+
 });
