@@ -3,7 +3,9 @@ var mysql      = require('mysql');
    host     : 'localhost',
    user     : 'root',
    password : '',
-   database : 'riskdb'
+   port     : '3307',
+   database : 'riskdb',
+   socket   : 'tmp/mysql.sock' // don't know where the rest of the path is
  });
 
  connection.connect();
